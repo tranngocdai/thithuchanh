@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            function giaiPt(a, b) {
+                let result = 0;
+                if (a || b) {
+                    result = "Nhập số nguyên";
+                } else {
+                    if (a !== 0) {
+                        result = -b / a;
+                    } else {
+                        if (b === 0) {
+                            alert("Vì a = 0 , b = 0 nên pt có vô số nghiệm")
+                        } else {
+                            alert("Vì b = " + b + " (b ≠ 0) => Phương trình 0x + " + b + " vô nghiệm")
+                        }
+                    }
+                }
+                return result;
+            }
+        </script>
+</body>
+</html>

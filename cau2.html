@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let number = parseInt(prompt("Nhập số dể tìm vị trí trong mảng"));
+            document.write(indexOfArrays(number, numberArray));
+
+            function indexOfArrays(num, arr) {
+                if (Number.isNaN(num) || num < 1 || num > 10) {
+                    return "Nhập số từ 1 and 10";
+                } else if (!Array.isArray(arr)) {
+                    return "Error! Not an array";
+                } else {
+                    for (let i = 0; i < arr.length; i++) {
+                        if (arr[i] === num) {
+                            return "Index of array " + arr.toString() + " is " + i;
+                        }
+                    }
+                }
+                return false;
+            }
+        </script>
+</body>
+</html>

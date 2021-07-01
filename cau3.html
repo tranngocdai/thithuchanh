@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập chuỗi");
+
+    if (str.length > 0) {
+        let stringToArray = Array.from(str.toLowerCase());
+        let result = chuAm(stringToArray);
+        if (result) {
+            document.write("Số ký tự nguyên âm: ", result[0]);
+            document.write("<br>Ký tự nguyên âm trong chuỗi: ", result[1]);
+        } else {
+            document.write("Không thấy ký tự nguyên âm");
+        }
+    } else {
+        document.write("Chưa nhập chuỗi");
+    }
+
+    function chuAm(array) {
+        let counter = 0, result = [];
+        array.forEach(function(am, index) {
+            if (am === 'a' || am === 'e' || am === 'o' || am === 'i' || am === 'u') {
+                array[index] = "<span class=\"highlight-text\">" + am + "</span>";
+                counter++;
+            }
+        });
+        result.push(counter);
+        result.push(array.join(""));
+        return (counter > 0) ? result : false;
+    }
+</script>
+</body>
+</html>
